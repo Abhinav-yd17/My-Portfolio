@@ -1,0 +1,23 @@
+/* ================================
+   1️⃣ Custom Global Styles FIRST
+   ================================ */
+@import "./styles/globals.css";
+@import "./styles/themes.css";
+
+/* ================================
+   2️⃣ Tailwind CSS (MUST BE LAST)
+   ================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   3️⃣ Optional Base Overrides
+   ================================ */
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background-color: theme(colors.dark-bg);
+  color: white;
+}

@@ -1,0 +1,38 @@
+export const projects = [
+  {
+    id: 1,
+    title: 'E-commerce Platform',
+    description: 'Full-stack e-commerce solution with real-time inventory management and payment integration.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+    image: '/assets/images/project1.jpg',
+  },
+  {
+    id: 2,
+    title: 'Task Management App',
+    description: 'Collaborative project management tool with drag-and-drop interface and real-time updates.',
+    tech: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+    image: '/assets/images/project2.jpg',
+  },
+  {
+    id: 3,
+    title: 'Weather Dashboard',
+    description: 'Real-time weather application with 7-day forecasts and interactive maps.',
+    tech: ['Vue.js', 'Weather API', 'Chart.js', 'Leaflet'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+    image: '/assets/images/project3.jpg',
+  },
+  {
+    id: 4,
+    title: 'Fitness Tracker',
+    description: 'Mobile-first fitness application with workout plans and progress tracking.',
+    tech: ['React Native', 'Firebase', 'Redux', 'Chart.js'],
+    github: 'https://github.com',
+    live: 'https://example.com',
+    image: '/assets/images/project4.jpg',
+  },
+];
