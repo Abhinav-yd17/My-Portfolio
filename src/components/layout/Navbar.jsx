@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../../context/ThemeContext";
 import { smoothScrollTo } from "../../utils/helpers";
+import logo from "../../assets/images/icons/logo.png"; // ✅ Correct path
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +23,10 @@ const Navbar = () => {
       transition={{ duration: 0.8 }}
       className="fixed top-0 left-0 w-full z-50"
     >
-      {/* 🌌 Background Glass Panel */}
+      {/* 🌌 Glass Background */}
       <div className="relative w-full backdrop-blur-xl bg-black/20 border-b border-cyan-400/20 shadow-[0_0_40px_rgba(0,255,255,0.15)]">
 
-        {/* ✨ Animated Neon Top Line */}
+        {/* ✨ Neon Animated Top Line */}
         <motion.div
           className="absolute top-0 left-0 h-[2px] w-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"
           animate={{ opacity: [0.4, 1, 0.4] }}
@@ -34,13 +35,26 @@ const Navbar = () => {
 
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative z-10">
 
-          {/* Logo */}
+          {/* 🔥 LOGO */}
           <motion.div
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.08 }}
             onClick={() => smoothScrollTo("hero")}
-            className="text-2xl font-bold tracking-widest text-white cursor-pointer"
+            className="flex items-center gap-3 cursor-pointer select-none"
           >
-            Abhi<span className="text-cyan-400">folio</span>
+            <img
+              src={logo}
+              alt="AF Logo"
+              className="w-10 h-10 rounded-full object-cover shadow-[0_0_18px_rgba(124,58,237,0.8)]"
+            />
+
+            <div className="leading-tight">
+              <div className="text-white font-semibold tracking-wide text-sm">
+                Abhi Folio
+              </div>
+              <div className="text-xs text-cyan-400 tracking-wider">
+                
+              </div>
+            </div>
           </motion.div>
 
           {/* Desktop Menu */}
