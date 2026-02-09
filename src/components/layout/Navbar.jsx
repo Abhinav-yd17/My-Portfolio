@@ -30,12 +30,11 @@ const Navbar = () => {
           onClick={() => smoothScrollTo("hero")}
           className="text-xl font-bold tracking-wide text-white cursor-pointer"
         >
-          Dev<span className="text-indigo-400">Portfolio</span>
+          Abhi<span className="text-indigo-400">folio</span>
         </motion.div>
 
         {/* Desktop Menu */}
         <div className="flex items-center gap-x-6">
-
           {navItems.map((item) => (
             <motion.button
               key={item.id}
@@ -47,16 +46,6 @@ const Navbar = () => {
               {item.label}
             </motion.button>
           ))}
-
-          {/* Theme Toggle */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={toggleTheme}
-            className="w-9 h-9 rounded-full flex items-center justify-center bg-white/10 text-white"
-          >
-            {isDark ? "🌙" : "☀️"}
-          </motion.button>
         </div>
 
         {/* Mobile Menu Button */}

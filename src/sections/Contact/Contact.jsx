@@ -1,147 +1,94 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-
+import React from "react";
 import Card from "../../components/ui/Card";
 import SectionTitle from "../../components/ui/SectionTitle";
-import Button from "../../components/common/Button";
 import { socials } from "../../data/socials";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Demo submit (frontend only)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    alert("Message sent successfully! (Demo)");
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
-  };
-
   return (
-    <section id="contact" className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="contact" className="relative py-32 overflow-hidden">
+
+      {/* HUGE BACKGROUND TEXT */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 text-[160px] font-black text-white/15 blur-[1px] tracking-wider select-none pointer-events-none">
+        CONTACT
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <SectionTitle
           title="Get In Touch"
-          subtitle="Have a project in mind? Let’s build something amazing together"
+          subtitle="Have a project in mind? Let’s build something that stands out."
           align="center"
         />
 
-        <div className="grid md:grid-cols-2 gap-12 mt-16">
-          {/* LEFT: FORM */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+        {/* SPLIT LAYOUT */}
+        <div className="grid lg:grid-cols-2 gap-20 items-start mt-20">
+
+          {/* LEFT SIDE — PERSONALITY */}
+          <div className="space-y-10">
+            <h2 className="text-5xl font-extrabold leading-tight">
+              Let’s build something that
+              <span className="block text-neon-blue">
+                doesn’t look like everyone else.
+              </span>
+            </h2>
+
+            <p className="text-gray-400 text-lg">
+              I design & develop high-performance, visually rich digital
+              experiences that feel premium and modern.
+            </p>
+
+            <div className="border-l-4 border-neon-blue pl-6 text-gray-300 italic">
+              Available for freelance, full-time & ambitious ideas.
+            </div>
+          </div>
+
+          {/* RIGHT SIDE — CONTACT DATA CARDS */}
+          <div className="space-y-8">
+
+            {/* Divider Label */}
+            <div className="flex items-center gap-4">
+              <div className="h-px bg-white/10 flex-1" />
+              <span className="text-sm text-gray-500 tracking-widest">
+                DIRECT CONTACT
+              </span>
+              <div className="h-px bg-white/10 flex-1" />
+            </div>
+
             <Card hoverEffect={false}>
-              <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+              <div className="space-y-6">
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-gray-400 mb-2">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-lg glass border border-dark-border focus:border-neon-blue focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-gray-400 mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="your.email@example.com"
-                    className="w-full px-4 py-3 rounded-lg glass border border-dark-border focus:border-neon-blue focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-gray-400 mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Tell me about your project..."
-                    className="w-full px-4 py-3 rounded-lg glass border border-dark-border focus:border-neon-blue focus:outline-none resize-none"
-                  />
-                </div>
-
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </motion.div>
-              </form>
-            </Card>
-          </motion.div>
-
-          {/* RIGHT: INFO + SOCIALS */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <Card hoverEffect={false}>
-              <h3 className="text-2xl font-bold mb-6">Contact Info</h3>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 rounded-lg glass-light">
-                  <span className="text-2xl">📧</span>
-                  <div>
-                    <div className="text-gray-400">Email</div>
-                    <div className="font-medium">hello@devportfolio.com</div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                  <div className="text-xs uppercase text-gray-500 tracking-widest">
+                    Email
+                  </div>
+                  <div className="text-xl font-semibold mt-2">
+                    abhinavyadav.ay17@gmail.com
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 rounded-lg glass-light">
-                  <span className="text-2xl">🌍</span>
-                  <div>
-                    <div className="text-gray-400">Location</div>
-                    <div className="font-medium">Remote · Global</div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                  <div className="text-xs uppercase text-gray-500 tracking-widest">
+                    Location
+                  </div>
+                  <div className="text-xl font-semibold mt-2">
+                    Greater Noida, India
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 rounded-lg glass-light">
-                  <span className="text-2xl">⏰</span>
-                  <div>
-                    <div className="text-gray-400">Availability</div>
-                    <div className="font-medium">Open to new projects</div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                  <div className="text-xs uppercase text-gray-500 tracking-widest">
+                    Availability
+                  </div>
+                  <div className="text-xl font-semibold mt-2">
+                    Open to new projects
                   </div>
                 </div>
+
               </div>
             </Card>
 
+            {/* SOCIALS */}
             <Card hoverEffect={false}>
-              <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
+              <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {socials.map((social) => (
@@ -150,15 +97,17 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-4 rounded-xl glass hover:border-neon-blue border border-transparent transition-all"
+                    className="aspect-square rounded-xl bg-white/5 border border-white/10 
+                    flex items-center justify-center text-xl font-semibold 
+                    hover:border-neon-blue transition"
                   >
-                    <span className="text-2xl mb-2">{social.icon}</span>
-                    <span className="text-sm text-gray-400">{social.name}</span>
+                    {social.icon}
                   </a>
                 ))}
               </div>
             </Card>
-          </motion.div>
+
+          </div>
         </div>
       </div>
     </section>

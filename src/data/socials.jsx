@@ -1,7 +1,5 @@
 export const socials = [
-  { name: 'GitHub', url: 'https://github.com', icon: 'github' },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
-  { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
-  { name: 'Email', url: 'mailto:hello@example.com', icon: 'email' },
-  { name: 'Codepen', url: 'https://codepen.io', icon: 'codepen' },
+  { name: 'GitHub', url: 'https://github.com/Abhinav-yd17', icon: 'github' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abhinav-yadav-906387331/', icon: 'linkedin' },
+  { name: 'Email', url: 'abhinavyadav.ay17@gmail.com', icon: 'email' },
 ];

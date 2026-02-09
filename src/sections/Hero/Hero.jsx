@@ -21,13 +21,18 @@ const Hero = () => {
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      style={{ zIndex: 1 }}
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-blue/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-3xl" />
+      {/* ✨ Glow layer BEHIND everything */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ zIndex: -1 }}
+      >
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/5 rounded-full blur-3xl" />
       </div>
 
+      {/* 🧊 Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         {/* Dot */}
         <motion.div
@@ -40,7 +45,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Headings */}
-        {["Hello, I'm", 'Full Stack Developer', 'Based in Digital Space'].map(
+        {["Hello, I'm Abhinav", 'Software Developer', 'Developer in the Digital Era'].map(
           (text, i) => (
             <motion.h1
               key={i}
@@ -48,10 +53,12 @@ const Hero = () => {
               variants={textVariants}
               initial="hidden"
               animate="visible"
-              className={`text-4xl md:text-7xl font-bold font-display mb-4 ${
-                i === 1
-                  ? 'bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent'
-                  : 'text-white'
+              className={`font-bold font-display mb-4 ${
+                i === 0
+                  ? 'text-2xl md:text-4xl text-gray-300'
+                  : i === 1
+                  ? 'text-4xl md:text-7xl bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent'
+                  : 'text-3xl md:text-5xl text-white'
               }`}
             >
               {text}

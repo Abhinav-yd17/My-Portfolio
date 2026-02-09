@@ -6,7 +6,7 @@ import SectionTitle from '../../components/ui/SectionTitle';
 import { skills } from '../../data/skills';
 
 const Skills = () => {
-  const categories = ['frontend', 'backend', 'database', 'devops', 'tools'];
+  const categories = ['frontend', 'backend', 'database', 'DSA', 'tools'];
 
   return (
     <section id="skills" className="py-20">
@@ -79,11 +79,11 @@ const Skills = () => {
               className="text-center p-4 rounded-xl glass hover:border-neon-blue/30 border border-transparent transition-all"
             >
               <div className="text-3xl mb-2">
-                {category === 'frontend' && '⚡'}
-                {category === 'backend' && '🖥️'}
-                {category === 'database' && '🗄️'}
-                {category === 'devops' && '🚀'}
-                {category === 'tools' && '🔧'}
+               {category === 'frontend' && '⚡'}
+               {category === 'backend' && '🖥️'}
+               {category === 'database' && '🗄️'}
+               {category === 'DSA' && '🧠'} 
+               {category === 'tools' && '🔧'} 
               </div>
               <div className="capitalize font-medium">
                 {category}

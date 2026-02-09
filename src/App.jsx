@@ -5,8 +5,9 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Loader from './components/common/Loader';
 import Cursor from './components/common/Cursor';
+import Global3DBackground from './components/three/Global3DBackground';
 
-// Lazy load sections for better performance
+// Lazy load sections
 const Hero = lazy(() => import('./sections/Hero/Hero'));
 const About = lazy(() => import('./sections/About/About'));
 const Skills = lazy(() => import('./sections/Skills/Skills'));
@@ -18,9 +19,7 @@ function App() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -28,9 +27,15 @@ function App() {
     <ThemeProvider>
       <Suspense fallback={<Loader />}>
         <Cursor />
-        <div className="bg-dark-bg min-h-screen">
+
+        {/* 🌌 GLOBAL 3D BACKGROUND */}
+        <Global3DBackground />
+
+        {/* SITE CONTENT */}
+        <div className="relative min-h-screen" style={{ zIndex: 10 }}>
+
           <Navbar />
-          
+
           <motion.main
             variants={sectionVariants}
             initial="hidden"
@@ -42,7 +47,7 @@ function App() {
             <Projects />
             <Contact />
           </motion.main>
-          
+
           <Footer />
         </div>
       </Suspense>

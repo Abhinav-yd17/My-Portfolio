@@ -10,17 +10,31 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0a0a0f;
+  background: transparent;   /* 🔥 IMPORTANT — allows 3D canvas to show */
   color: #ffffff;
   overflow-x: hidden;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 /* ================================
-   Button & Link Reset (IMPORTANT)
+   Canvas Fix
+================================ */
+
+canvas {
+  display: block;
+}
+
+/* ================================
+   Button & Link Reset
 ================================ */
 
 button {

@@ -30,10 +30,10 @@ const Projects = () => {
                 <div className="relative overflow-hidden rounded-xl mb-6 group">
                   <div className="aspect-video bg-gradient-to-br from-dark-card to-dark-border flex items-center justify-center">
                     <div className="text-6xl opacity-20">
-                      {index % 4 === 0 && '🛒'}
-                      {index % 4 === 1 && '📋'}
-                      {index % 4 === 2 && '🌤️'}
-                      {index % 4 === 3 && '💪'}
+                      {index % 4 === 0 && ''}
+                      {index % 4 === 1 && ''}
+                      {index % 4 === 2 && ''}
+                      {index % 4 === 3 && ''}
                     </div>
                   </div>
 
@@ -105,7 +105,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Abhinav-yd17"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -6,15 +6,14 @@ import SectionTitle from '../../components/ui/SectionTitle';
 
 const About = () => {
   const techStack = [
-    'React / Next.js',
-    'TypeScript',
+    'React.js',
+    'C++',
+    'Flask',
     'Node.js',
     'Python',
     'MongoDB',
-    'PostgreSQL',
-    'AWS / GCP',
-    'Docker',
-    'GraphQL',
+    'MY SQL',
+    'NLP',
     'Tailwind CSS',
   ];
 
@@ -38,7 +37,7 @@ const About = () => {
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
 
               <p className="text-gray-300 mb-4">
-                With over 5 years of experience in software development,
+                With over 2 years of experience in software development,
                 I&apos;ve worked on projects ranging from startup MVPs to
                 enterprise-scale applications.
               </p>
@@ -94,10 +93,11 @@ const About = () => {
         {/* STATS */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
           {[
-            { value: '50+', label: 'Projects Completed' },
-            { value: '5+', label: 'Years Experience' },
-            { value: '100%', label: 'Client Satisfaction' },
-            { value: '24/7', label: 'Code Mode' },
+           { value: '10+', label: 'Projects Built' },
+           { value: '2nd Year', label: 'B.Tech CSE AI Student' },
+           { value: '500+', label: 'Hours of Coding' },
+           { value: '∞', label: 'Learning Mode' },
+
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
