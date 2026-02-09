@@ -5,80 +5,82 @@ import { socials } from "../../data/socials";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-20 sm:py-28 overflow-hidden">
 
-      {/* HUGE BACKGROUND TEXT */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 text-[160px] font-black text-white/15 blur-[1px] tracking-wider select-none pointer-events-none">
+      {/* HUGE BACKGROUND TEXT (Responsive) */}
+      <div className="absolute top-6 sm:top-10 left-1/2 -translate-x-1/2
+      text-[60px] sm:text-[100px] md:text-[140px] lg:text-[160px]
+      font-black text-white/10 blur-[1px] tracking-wider
+      select-none pointer-events-none whitespace-nowrap">
         CONTACT
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <SectionTitle
           title="Get In Touch"
           subtitle="Have a project in mind? Let’s build something that stands out."
           align="center"
         />
 
-        {/* SPLIT LAYOUT */}
-        <div className="grid lg:grid-cols-2 gap-20 items-start mt-20">
+        {/* RESPONSIVE SPLIT LAYOUT */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mt-12 sm:mt-20">
 
-          {/* LEFT SIDE — PERSONALITY */}
-          <div className="space-y-10">
-            <h2 className="text-5xl font-extrabold leading-tight">
+          {/* LEFT SIDE */}
+          <div className="space-y-6 sm:space-y-10 text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
               Let’s build something that
               <span className="block text-neon-blue">
                 doesn’t look like everyone else.
               </span>
             </h2>
 
-            <p className="text-gray-400 text-lg">
+            <p className="text-gray-400 text-base sm:text-lg">
               I design & develop high-performance, visually rich digital
               experiences that feel premium and modern.
             </p>
 
-            <div className="border-l-4 border-neon-blue pl-6 text-gray-300 italic">
+            <div className="border-l-4 border-neon-blue pl-4 sm:pl-6 text-gray-300 italic text-sm sm:text-base">
               Available for freelance, full-time & ambitious ideas.
             </div>
           </div>
 
-          {/* RIGHT SIDE — CONTACT DATA CARDS */}
-          <div className="space-y-8">
+          {/* RIGHT SIDE */}
+          <div className="space-y-6 sm:space-y-8">
 
-            {/* Divider Label */}
             <div className="flex items-center gap-4">
               <div className="h-px bg-white/10 flex-1" />
-              <span className="text-sm text-gray-500 tracking-widest">
+              <span className="text-xs sm:text-sm text-gray-500 tracking-widest">
                 DIRECT CONTACT
               </span>
               <div className="h-px bg-white/10 flex-1" />
             </div>
 
             <Card hoverEffect={false}>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
 
-                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
                   <div className="text-xs uppercase text-gray-500 tracking-widest">
                     Email
                   </div>
-                  <div className="text-xl font-semibold mt-2">
+                  <div className="text-base sm:text-xl font-semibold mt-2 break-words">
                     abhinavyadav.ay17@gmail.com
                   </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
                   <div className="text-xs uppercase text-gray-500 tracking-widest">
                     Location
                   </div>
-                  <div className="text-xl font-semibold mt-2">
+                  <div className="text-base sm:text-xl font-semibold mt-2">
                     Greater Noida, India
                   </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
                   <div className="text-xs uppercase text-gray-500 tracking-widest">
                     Availability
                   </div>
-                  <div className="text-xl font-semibold mt-2">
+                  <div className="text-base sm:text-xl font-semibold mt-2">
                     Open to new projects
                   </div>
                 </div>
@@ -88,7 +90,9 @@ const Contact = () => {
 
             {/* SOCIALS */}
             <Card hoverEffect={false}>
-              <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-6 text-center lg:text-left">
+                Connect With Me
+              </h3>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {socials.map((social) => (
