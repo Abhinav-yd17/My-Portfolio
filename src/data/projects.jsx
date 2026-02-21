@@ -19,8 +19,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'Zentraa',
-    description: 'Zentraa is an online gaming marketplace where users can buy and sell verified game IDs across multiple popular games.',
+    title: 'InkSpector',
+    description: 'InkSpector is an advanced deep-detection system that analyzes documents and voice inputs to identify AI-generated or AI-integrated content.',
     tech: ['Node.js', 'React.js', 'MySQL', 'Leaflet'],
     github: 'https://github.com',
     live: 'https://example.com',
